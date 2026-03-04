@@ -53,4 +53,6 @@ mean(tail(results$waiting, 365))
 # key additions for main analysis:
 # 1. do simulation by group
 # 2. relax assumption that reported delays represent delays in the community
+# 3. consider modelling diagnosis as a stochastic risk conditional on equity-based characteristics
+
 # (eg. some cases never get diagnosed)
