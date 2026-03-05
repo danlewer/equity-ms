@@ -9,7 +9,7 @@ mean_cases_per_day <- 0.5
 mean_delay <- c(300, 200, 100) # delay in days for three groups
 group_sizes <- c(0.5, 0.3, 0.2)
 
-# make data
+# generate data (in the real analysis this will be taken from observed patient data)
 
 cases <- rpois(days, mean_cases_per_day) # cases on each day
 n <- sum(cases) # total number of cases
@@ -51,8 +51,8 @@ plot(results$waiting, type = 'l')
 mean(tail(results$waiting, 365))
 
 # key additions for main analysis:
-# 1. do simulation by group
+# 1. do simulation by group to show equity
 # 2. relax assumption that reported delays represent delays in the community
-# 3. consider modelling diagnosis as a stochastic risk conditional on equity-based characteristics
-
 # (eg. some cases never get diagnosed)
+# 3. consider modelling diagnosis as a stochastic risk conditional on equity-based characteristics
+# 4. repeat simulation multiple times to understand uncertainty
