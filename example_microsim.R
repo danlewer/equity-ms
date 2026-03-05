@@ -25,7 +25,7 @@ par(mfrow = c(1, 3))
 lapply(split(durations, group), hist, xlim = c(0, 2000), xlab = "Days", breaks = 20)
 
 # typical number in the community (simple analysis using averages)
-# number in community = rates of cases * duration of wait
+# number in community = rates of cases * duration of wait ("Little's Law - https://en.wikipedia.org/wiki/Little%27s_law)
 # e.g if you diagnose 1/day, and the wait is 1 day, there is always 1 in the community
 # e.g.if you diagnose 5/day, and the wait is 5 days, there are always 25 in the community
 
@@ -56,3 +56,4 @@ mean(tail(results$waiting, 365))
 # (eg. some cases never get diagnosed)
 # 3. consider modelling diagnosis as a stochastic risk conditional on equity-based characteristics
 # 4. repeat simulation multiple times to understand uncertainty
+
